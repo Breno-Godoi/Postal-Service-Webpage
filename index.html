@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Postal Service</title>
+</head>
+
+<body>
+	<image src="images/iwd_ps_logo.png" width="50%" height="50%" />
+
+	<!-- Create Parcel -->
+	<fieldset>
+		<legend>Create a Parcel</legend>
+		<div>
+			<strong>Destination: </strong>
+			<select id="createParcel_Destination" style="padding-right: 5px;">
+				<option value="Alberta">Alberta</option>
+				<option value="British Columbia">British Columbia</option>
+				<option value="Manitoba">Manitoba</option>
+				<option value="New Brunswick">New Brunswick</option>
+				<option value="Newfoundland">Newfoundland</option>
+				<option value="Northwest Territories">Northwest Territories</option>
+				<option value="Nova Scotia">Nova Scotia</option>
+				<option value="Nunavut">Nunavut</option>
+				<option value="Ontario">Ontario</option>
+				<option value="P.E.I">P.E.I</option>
+				<option value="Quebec">Quebec</option>
+				<option value="Saskatchewan">Saskatchewan</option>
+				<option value="Yukon">Yukon</option>
+			</select>
+			<strong>Weight (g): </strong>
+			<input type="number" id="createParcel_Weight" value=0 style="padding-right: 5px;" />
+			<strong>Express Shipping: </strong>
+			<input type="checkbox" id="createParcel_expressShipping" style="transform: scale(1.5);" />
+			<br>
+			<input type="button" value="Create Parcel" onclick="createParcel();" style="margin-top: 10px;" />
+		</div>
+	</fieldset>
+	<br>
+
+	<!-- Process Parcel -->
+	<fieldset>
+		<legend>Process a Parcel</legend>
+		<div>
+			<strong>Tracking Number: </strong>
+			<input type="text" id="tbTrackingNumber" maxlength=13 style="padding-right: 5px;" />
+			<strong>Set Status: </strong>
+			<select id="processParcel_Status">
+				<option value="Shipped">Shipped</option>
+				<option value="In Transit">In Transit</option>
+				<option value="Delivered">Delivered</option>
+			</select>
+			<br>
+			<input type="button" value="Process Parcel" onclick="processParcel();" style="margin-top: 10px;" />
+		</div>
+	</fieldset>
+	<br>
+
+	<!-- Display Parcel -->
+	<fieldset>
+		<legend>Display Parcels</legend>
+		<div style="padding-bottom: 5px;">
+			<strong>Status: </strong>
+			<select id="displayParcelsFilter" onchange="displayParcels();">
+				<option value="All" selected>All</option>
+				<option value="Processing">Processing</option>
+				<option value="Shipped">Shipped</option>
+				<option value="In Transit">In Transit</option>
+				<option value="Delivered">Delivered</option>
+			</select>
+		</div>
+		<div style="padding-bottom: 5px;"><strong></strong></div>
+		<div id="displayParcelOutput">[Ouput the list of parcels here]</div>
+	</fieldset>
+
+
+	<script src="script.js"></script>
+</body>
+
+</html>
