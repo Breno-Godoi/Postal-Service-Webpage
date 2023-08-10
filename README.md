@@ -1,5 +1,8 @@
 Postal Service Webpage
 
+![image](https://github.com/Breno-Godoi/Postal-Service-Webpage/assets/103461863/dcc45025-29be-4f37-98cb-bd94e04eacd6)
+
+
 This is a vanilla JavaScript project for a Postal Service App that allows users to create and process parcels within Canada. The app provides pricing information based on the dimensions and weight of the parcels.
 
 Features
